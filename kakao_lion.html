@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라이언</title>
+    <style>
+    body{text-align: center; margin: 50px auto; 
+        background: rgb(45, 45, 85);}
+    .ryan{position: relative;}
+
+    .ryan .ear{position: absolute; left: calc(50% - 115px); 
+        width: 250px; height: 70px;
+        /* background: #fff; */
+        }
+    .ryan .ear:before, .ryan .ear:after{content: '';
+        position: absolute;
+        width: 70px; height: 70px; background: #d5972a;
+        border-radius: 50%; border: 8px solid #000;}
+    .ryan .ear:before{transform: translateX(-120px);}
+    .ryan .ear:after{transform: translateX(35px);} 
+    
+    .ryan .face{position: absolute; top: 20px;
+        width: 300px; height: 260px; border-radius: 50%;
+        left: calc(50% - 150px);  background: #d5972a; 
+        border: 8px solid black}
+
+    .ryan .face:hover>.eyes:after{
+    transform: scaleY(0.2); margin-left: 50px;}
+
+    .ryan .face:hover>.eyebrows:before{
+        transform: rotate(15deg) translate(-60px,20px);}
+
+
+    .ryan .eyebrows{position: absolute; 
+        left: 50%; top: 70px; width: 8px; height: 8px; 
+        border-radius: 30px;
+        /* background: #fff; */}
+
+    .ryan .eyebrows:before, .ryan .eyebrows:after{
+        content: ''; position: absolute; left:calc(50% - 35px); 
+        width: 65px; height: 12px; background: #000;
+        box-sizing: border-box; border-radius: 20px;}
+    .ryan .eyebrows:before{transform-origin: right top; 
+        transform: translateX(-60px); }
+    .ryan .eyebrows:after{transform-origin: left bottom;
+        transform: translateX(60px); }
+
+    .ryan .eyes{position: absolute; left: calc(50% - 12px); top: 105px;
+                width: 20px; height: 20px; border-radius: 50%;
+                /* background: red; */}
+    .ryan .eyes:before, .ryan .eyes:after{content: '';
+        position: absolute; width: 20px; height: 20px;
+        background: #000; border-radius: 50%;}
+    .ryan .eyes:before{margin-left: -70px;}
+    .ryan .eyes:after{margin-left: 50px;}
+
+    .ryan .nose{z-index: 2; position: absolute; left: calc(50% - 15px); top: 53%;
+        width: 26px; height: 26px; background: #000;
+        border-radius: 17px 17px 20px 20px;}
+
+    .ryan .mouth{position: absolute; left: calc(50% - 50px); 
+        top: 145px; width: 100px; height: 55px; 
+        /* background: #fff; */
+    }
+    .ryan .mouth:before, .ryan .mouth:after{content: '';
+        position: absolute; width: 55px; height: 55px;
+        border: 8px solid #000; background: #fff;
+        border-radius: 50%; box-sizing: border-box;}
+    .ryan .mouth:before{transform: translateX(-50px);}
+    .ryan .mouth:after{transform: translateX(-10px);}
+    .ryan .mouth_center{z-index: 1; position: absolute; 
+        left: calc(50% - 20px); top: 155px;
+        width: 40px; height: 28px;
+        background: #fff;}
+
+    
+    
+    </style>
+</head>
+<body>
+    <div class="ryan">
+        <div class="ear"></div>
+        <div class="face">
+            <div class="eyebrows"></div>
+            <div class="eyes"></div>
+.            <div class="nose"></div>
+            <div class="mouth"></div>
+            <div class="mouth_center"></div>
+        </div>
+    </div>
+</body>
+</html>
